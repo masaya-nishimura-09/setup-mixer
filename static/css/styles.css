@@ -1,0 +1,31 @@
+#items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.genre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  padding: 10px;
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-img {
+  width: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  object-fit: cover;
+}

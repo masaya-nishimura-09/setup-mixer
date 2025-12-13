@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Setup Mixer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" type="img/png" href="../assets/Setup Mixer-logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>検索結果</h1>
+    </header>
+
+    <main id="items-container">
+      <section class="genre-wrapper">
+        <h2>デスク</h2>
+        <ul id="Desk" class="genre">
+          {{ range .Desk }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>イス</h2>
+        <ul id="Chair" class="genre">
+          {{ range .Chair }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>キーボード</h2>
+        <ul id="Keyboard" class="genre">
+          {{ range .Keyboard }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>マウス</h2>
+        <ul id="Mouse" class="genre">
+          {{ range .Mouse }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>マウスパッド</h2>
+        <ul id="MousePad" class="genre">
+          {{ range .MousePad }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>モニター</h2>
+        <ul id="Monitor" class="genre">
+          {{ range .Monitor }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>モニターアーム</h2>
+        <ul id="MonitorArm" class="genre">
+          {{ range .MonitorArm }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>デスクライト</h2>
+        <ul id="DeskLamp" class="genre">
+          {{ range .DeskLamp }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>電源タップ</h2>
+        <ul id="PowerStrip" class="genre">
+          {{ range .PowerStrip }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>ケーブル収納</h2>
+        <ul id="PowerStripCase" class="genre">
+          {{ range .PowerStripCase }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>スピーカー</h2>
+        <ul id="Speaker" class="genre">
+          {{ range .Speaker }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>ウェブカメラ</h2>
+        <ul id="Camera" class="genre">
+          {{ range .Camera }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="genre-wrapper">
+        <h2>ヘッドセット</h2>
+        <ul id="Headphone" class="genre">
+          {{ range .Headphone }}
+          <li class="item">
+            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
+            <p class="item-price">{{ .ItemPrice }}円</p>
+            <a href="{{ .ItemUrl }}">もっと見る</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <small class="copyright">&copy; <span id="year"></span> Setup Mixer</small>
+    </footer>
+
+    <script src="../static/js/index.js"></script>
+  </body>
+</html>
