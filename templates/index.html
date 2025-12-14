@@ -13,13 +13,17 @@
   </head>
   <body>
     <header>
-      <h1>Setup Mixer </h1>
+      <img src="../assets/Setup Mixer-logo/logo.png" alt="logo image" id="logo">
+      <div id="nav-bar">
+        <a href="/" class="nav-a">ホーム</a>
+        <a href="/set" class="nav-a">セット</a>
+      </div>
     </header>
 
-    <main>
-      <form id="keyword-form" action="/item" method="get">
-        <label for="keyword">キーワード</label>
-        <input type="text" id="keyword" name="q">
+    <main id="home-page">
+      <p>好みの条件で検索して、統一感のあるオフィスグッズセットを作成しましょう。</p>
+      <form action="/item" method="get">
+        <input type="text" id="keyword" name="q" placeholder="キーワードの間に半角スペースを入れてください。">
         <button id="search-button">検索</button>
       </form>
     </main>

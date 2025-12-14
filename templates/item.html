@@ -12,179 +12,282 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1>検索結果</h1>
+   <header>
+      <img src="../assets/Setup Mixer-logo/logo.png" alt="logo image" id="logo">
+      <div id="nav-bar">
+        <a href="/" class="nav-a">ホーム</a>
+        <a href="/set" class="nav-a">セット</a>
+      </div>
     </header>
 
-    <main id="items-container">
-      <section class="genre-wrapper">
-        <h2>デスク</h2>
-        <ul id="Desk" class="genre">
-          {{ range .Desk }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
+    <main id="item-page">
+      <h1>検索結果</h1>
+      <div>
+        <ul id="index">
+          <li>
+            <a href="#desk">デスク</a>
           </li>
-          {{ end }}
+          <hr />
+          <li>
+            <a href="#chair">イス</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#keyboard">キーボード</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#mouse">マウス</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#mouse-pad">マウスパッド</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#monitor">モニター</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#monitor-arm">モニターアーム</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#desk-lamp">デスクライト</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#power-strip">電源タップ</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#power-strip-case">ケーブル収納</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#speaker">スピーカー</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#camera">ウェブカメラ</a>
+          </li>
+            <hr />
+          <li>
+            <a href="#headphone">ヘッドセット</a>
+          </li>
         </ul>
-      </section>
 
-      <section class="genre-wrapper">
-        <h2>イス</h2>
-        <ul id="Chair" class="genre">
-          {{ range .Chair }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+        <div id="items">
 
-      <section class="genre-wrapper">
-        <h2>キーボード</h2>
-        <ul id="Keyboard" class="genre">
-          {{ range .Keyboard }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="desk">
+            <h2>デスク</h2>
+            <ul>
+              {{ range .Desk }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>マウス</h2>
-        <ul id="Mouse" class="genre">
-          {{ range .Mouse }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="chair" >
+            <h2>イス</h2>
+            <ul>
+              {{ range .Chair }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>マウスパッド</h2>
-        <ul id="MousePad" class="genre">
-          {{ range .MousePad }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="keyboard">
+            <h2>キーボード</h2>
+            <ul>
+              {{ range .Keyboard }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>モニター</h2>
-        <ul id="Monitor" class="genre">
-          {{ range .Monitor }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="mouse">
+            <h2>マウス</h2>
+            <ul>
+              {{ range .Mouse }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>モニターアーム</h2>
-        <ul id="MonitorArm" class="genre">
-          {{ range .MonitorArm }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="mouse-pad">
+            <h2>マウスパッド</h2>
+            <ul>
+              {{ range .MousePad }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>デスクライト</h2>
-        <ul id="DeskLamp" class="genre">
-          {{ range .DeskLamp }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section >
+            <h2>モニター</h2>
+            <ul>
+              {{ range .Monitor }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>電源タップ</h2>
-        <ul id="PowerStrip" class="genre">
-          {{ range .PowerStrip }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="monitor-arm">
+            <h2>モニターアーム</h2>
+            <ul>
+              {{ range .MonitorArm }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>ケーブル収納</h2>
-        <ul id="PowerStripCase" class="genre">
-          {{ range .PowerStripCase }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="desk-lamp">
+            <h2>デスクライト</h2>
+            <ul>
+              {{ range .DeskLamp }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>スピーカー</h2>
-        <ul id="Speaker" class="genre">
-          {{ range .Speaker }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="power-strip">
+            <h2>電源タップ</h2>
+            <ul>
+              {{ range .PowerStrip }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>ウェブカメラ</h2>
-        <ul id="Camera" class="genre">
-          {{ range .Camera }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="power-strip-case">
+            <h2>ケーブル収納</h2>
+            <ul>
+              {{ range .PowerStripCase }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
 
-      <section class="genre-wrapper">
-        <h2>ヘッドセット</h2>
-        <ul id="Headphone" class="genre">
-          {{ range .Headphone }}
-          <li class="item">
-            <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}"> 
-            <p class="item-price">{{ .ItemPrice }}円</p>
-            <a href="{{ .ItemUrl }}">もっと見る</a>
-          </li>
-          {{ end }}
-        </ul>
-      </section>
+          <section id="speaker">
+            <h2>スピーカー</h2>
+            <ul>
+              {{ range .Speaker }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
+
+          <section id="camera">
+            <h2>ウェブカメラ</h2>
+            <ul>
+              {{ range .Camera }}
+              <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+              {{ end }}
+            </ul>
+          </section>
+
+          <section id="headphone">
+          <h2>ヘッドセット</h2>
+          <ul>
+            {{ range .Headphone }}
+            <li>
+                <a href="{{ .ItemUrl }}">
+                  <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
+                </a>
+                <p class="shop-name">{{ .ShopName }}</p>
+                <p class="item-price">{{ .ItemPrice }}円</p>
+                <button>セットに追加</button>
+              </li>
+            {{ end }}
+          </ul>
+          </section>
+        </div>
+      </div>
     </main>
 
     <footer>
