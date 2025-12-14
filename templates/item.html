@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-   <header>
+    <header>
       <img src="../assets/Setup Mixer-logo/logo.png" alt="logo image" id="logo">
       <div id="nav-bar">
         <a href="/" class="nav-a">ホーム</a>
@@ -31,47 +31,47 @@
           <li>
             <a href="#chair">イス</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#keyboard">キーボード</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#mouse">マウス</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#mouse-pad">マウスパッド</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#monitor">モニター</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#monitor-arm">モニターアーム</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#desk-lamp">デスクライト</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#power-strip">電源タップ</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#power-strip-case">ケーブル収納</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#speaker">スピーカー</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#camera">ウェブカメラ</a>
           </li>
-            <hr />
+          <hr />
           <li>
             <a href="#headphone">ヘッドセット</a>
           </li>
@@ -272,10 +272,10 @@
           </section>
 
           <section id="headphone">
-          <h2>ヘッドセット</h2>
-          <ul>
-            {{ range .Headphone }}
-            <li>
+            <h2>ヘッドセット</h2>
+            <ul>
+              {{ range .Headphone }}
+              <li>
                 <a href="{{ .ItemUrl }}">
                   <img class="item-img" alt="item image" src="{{ index .MediumImageUrls 0 }}">
                 </a>
@@ -283,8 +283,8 @@
                 <p class="item-price">{{ .ItemPrice }}円</p>
                 <button>セットに追加</button>
               </li>
-            {{ end }}
-          </ul>
+              {{ end }}
+            </ul>
           </section>
         </div>
       </div>
