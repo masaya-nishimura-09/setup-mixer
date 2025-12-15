@@ -1,19 +1,19 @@
 package model
 
-type Items struct {
-    Desk []Item 
-    Chair []Item 
-    Keyboard []Item 
-    Mouse []Item 
-    MousePad []Item 
-    Monitor []Item 
-    MonitorArm []Item 
-    DeskLamp []Item 
-    PowerStrip []Item 
-    PowerStripCase []Item 
-    Speaker []Item 
-    Camera []Item 
-    Headphone []Item 
+type ItemPage struct{
+    Nav []ItemNav
+    Categories []Category
+}
+
+type ItemNav struct {
+    Link string
+    Name string
+}
+
+type Category struct {
+    NameJa string
+    NameEn string
+    Items []Item
 }
 
 type SearchResult struct {
