@@ -113,7 +113,7 @@ footer {
 #items {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
     height: 800px;
     overflow-y: auto;
     width: 100%;
