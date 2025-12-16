@@ -63,10 +63,15 @@ func SearchItems(q string) []model.Category {
         NameJa: "ケーブル収納", 
         Items: repository.Search(200166, q + " ケーブルボックス"),
     })
+    //categories = append(categories, model.Category{
+    //    NameEn: "speaker", 
+    //    NameJa: "スピーカー", 
+    //    Items: repository.Search(208316, q + " pcスピーカー"),
+    //})
     categories = append(categories, model.Category{
         NameEn: "speaker", 
         NameJa: "スピーカー", 
-        Items: repository.Search(208316, q + " pcスピーカー"),
+        Items: repository.Search(0, q + " pc スピーカー スピーカー本体"),
     })
     categories = append(categories, model.Category{
         NameEn: "camera",
