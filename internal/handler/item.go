@@ -20,19 +20,9 @@ func Nav() []model.ItemNav {
         {Link: "#chair", Name: "イス"},
         {Link: "#keyboard", Name: "キーボード"},
         {Link: "#mouse", Name: "マウス"},
-        {Link: "#mouse-pad", Name: "マウスパッド"},
-        {Link: "#monitor", Name: "モニター"},
-        {Link: "#monitor-arm", Name: "モニターアーム"},
-        {Link: "#desk-lamp", Name: "デスクライト"},
-        {Link: "#power-strip", Name: "電源タップ"},
-        {Link: "#power-strip-case", Name: "ケーブル収納"},
-        {Link: "#speaker", Name: "スピーカー"},
-        {Link: "#camera", Name: "カメラ"},
-        {Link: "#headphone", Name: "ヘッドセット"},
     }
     return itemNav
 }
-
 
 func ItemHandler(w http.ResponseWriter, r *http.Request) {
     q := r.URL.Query().Get("q")
