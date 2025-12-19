@@ -11,22 +11,22 @@ func SearchItems(q string) []model.Category {
     categories = append(categories, model.Category{
         NameEn: "desk", 
         NameJa: "デスク", 
-        Items: repository.Search(215698, q + " オフィスデスク"),
+        Items: repository.Search(215698, "オフィスデスク " + q),
     })
     categories = append(categories, model.Category{
         NameEn: "chair", 
         NameJa: "イス", 
-        Items: repository.Search(111363, q + " オフィスチェア"),
+        Items: repository.Search(111363, "オフィスチェア " + q),
     })
     categories = append(categories, model.Category{
         NameEn: "keyboard", 
         NameJa: "キーボード", 
-        Items: repository.Search(560088, q + " キーボード"),
+        Items: repository.Search(560088, "キーボード " + q),
     })
     categories = append(categories, model.Category{
         NameEn: "mouse",
         NameJa: "マウス", 
-        Items: repository.Search(565170, q + " マウス"),
+        Items: repository.Search(565170, "マウス " + q),
     })
     return  categories
 }

@@ -26,6 +26,7 @@ func Search(genreId int, keywords string) []model.Item {
     values.Add("keyword", keywords)
     values.Add("hasReviewFlag", "1")
     values.Add("format", "json")
+    values.Add("hits", "30")
     values.Add("sort", "-reviewCount")
     values.Add("carrier", "0")
     values.Add("availability", "1")
@@ -57,8 +58,6 @@ func Search(genreId int, keywords string) []model.Item {
     if err := json.Unmarshal(body, &searchResult); err != nil {
         fmt.Println(err)
     }
-
-    fmt.Println(keywords)
 
     return searchResult.Items
 }
